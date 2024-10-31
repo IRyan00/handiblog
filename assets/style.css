@@ -1,21 +1,29 @@
-header {
-    margin: 0;
-    height: 5em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.container-fluid {
-    background-color: #007ACC;
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
     text-align: center;
     margin: 0;
-    padding-top: 2em;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+h1+h2+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    cursor: url(../assets/images/accessible-icon-brands-solid-orange.svg), auto;
+}
+
+/* DEBUT DU HEADER */
+header {
+    margin: 0;
+    height: 5em;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 .logoHeader {
@@ -24,32 +32,81 @@ body {
     border-radius: 100%;
 }
 
+.container-fluid {
+    background-color: #007ACC;
+    margin: 0;
+}
+
+.navbar-brand {
+    width: 75%;
+}
+
+.navbar-nav {
+    text-align: end;
+}
+
+/* FIN DU HEADER */
+
+
+/* DEBUT DU HEROS */
+
+.heros {
+    position: relative;
+}
+
+.heros::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-image: url(https://www.touteleurope.eu/wp-content/uploads/2022/03/handicap-illustration.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.heros2 {
+    position: relative;
+    text-align: center;
+    color: #28A745;
+}
+
 .imgHeros {
     width: 100%;
     height: 100%;
 }
 
-li {
-    text-align: end;
+.pres-title img {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
 }
 
-.titrepres {
+/* FIN DU HEROS */
+
+/* DEBUT ARTICLES */
+
+/* .titrepres {
     text-align: center;
-    padding-bottom: 1em;
     margin: 0;
-}
+} */
 
 .presentation {
     text-align: justify;
     width: 80%;
-    margin: auto;
-    padding-bottom: 3em;
+    margin: 2.5em auto;
 }
 
 .fond {
-    background-color: #c8c8c8;
+    background-color: #007ACC;
     text-align: center;
     padding-bottom: 0.5em;
+    margin: 3em auto;
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.3);
 }
 
 .article {
@@ -58,29 +115,118 @@ li {
     margin: auto;
     padding: 1em;
     margin-bottom: 3em;
-    border-radius: 5%;
+    border-radius: 2em;
     box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.1);
 }
 
 .titreg {
+    color: #ff7700;
     padding: 0.5em 0;
     margin-bottom: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1.5em 0;
 }
 
 .txtarticle {
     margin: 0;
 }
 
+.titrehandi {
+    width: 80%;
+    margin: auto;
+    padding: 1em 0 0 0;
+    text-align: center;
+}
+
+.titrediff {
+    margin-bottom: 0;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.sstitre {
+    font-size: 1.3em;
+    margin-bottom: 0;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+.article-btn {
+    background-color: #28A745;
+    border-radius: 5em;
+    padding: 0.1em 0.5em;
+    margin: 1em 0 0 0;
+}
+
+.article-btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.fond2 {
+    background-color: #007ACC;
+    text-align: center;
+    padding-bottom: 0.5em;
+    margin: 3em 0;
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.3);
+}
+
+.article2 {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+    margin-bottom: 3em;
+    border-radius: 2em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.1);
+}
+
+/* FIN ARTICLES */
+
+/* DEBUT DIFF HANDI */
+.li-diff {
+    padding-left: 0;
+    margin: 3em 0 0 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(3em, 1fr);
+    place-items: center;
+    padding: 1em;
+}
+
+.li-diff a {
+    text-decoration: none;
+    color: black;
+    background-color: #28A745;
+    border: 1px solid black;
+    border-radius: 2em;
+    padding: 0.2em 0.5em;
+}
+
+.diff-filter {
+    background-color: #007ACC;
+    position: sticky;
+    top: 3.4em;
+    z-index: 2;
+}
+
+#physiques {
+    margin-top: 0;
+}
+
+/* FIN DIFF HANDI */
+
+
+/* DEBUT DU FORMULAIRE DE CONTACT (all pages)*/
 .contact {
     width: 80%;
     margin: auto;
     text-align: center;
+    margin: 1.5em auto;
 }
 
 .legcontact {
-    padding: 2em 0;
+    padding: 0 0 2em 0;
     margin: 0;
 }
 
@@ -96,7 +242,6 @@ label {
 }
 
 ::placeholder {
-    /* padding-left: 0.5em; */
     font-style: italic;
     font-size: 0.9em;
 }
@@ -107,6 +252,19 @@ input {
 
 textarea {
     padding: 0.5em;
+}
+
+input {
+    width: 50%;
+}
+
+input::file-selector-button {
+    position: absolute;
+    top: 150em;
+    left: 9em;
+    background-color: #28A745;
+    border-radius: 2em;
+    padding: 0.2em 0.5em;
 }
 
 #name {
@@ -131,7 +289,7 @@ textarea {
 
 #message {
     width: 90%;
-    height: 5em;
+    height: 10em;
     margin: auto;
     border: none;
     border: 1px solid black;
@@ -151,68 +309,25 @@ textarea {
     box-shadow: 0.3em 0.3em 0.3em rgba(0, 0, 0, 0.2);
 }
 
-footer {
-    background-color: #007ACC;
-}
+/* FIN DU FORMULAIRE DE CONTACT */
 
-.footer {
-    width: 80%;
-    margin: auto;
-    height: 5em;
-    display: flex;
-    flex-direction: row;
 
-}
-
-.logofooter>img {
-    width: 20%;
-    height: 75%;
-}
-
-.titrehandi {
-    width: 80%;
-    margin: auto;
-    padding: 3em 0 1em;
-    text-align: center;
-}
-
-.titrediff {
-    margin-bottom: 0;
-    padding-bottom: 1em;
-    padding-top: 1em;
-}
-
-.sstitre {
-    font-size: 1.3em;
-    margin-bottom: 0;
-    padding-top: 1.5em;
-    padding-bottom: 1em;
-}
-
-.fond2 {
-    background-color: #dddddd;
-    text-align: center;
-    padding-bottom: 0.5em;
-}
-
-.article2 {
-    background-color: white;
-    width: 80%;
-    margin: auto;
-    padding: 1em;
-    margin-bottom: 3em;
-    border-radius: 2em;
-    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.1);
-}
-
+/* DEBUT DE A PROPOS */
 .partenaires {
     text-align: center;
     margin: 0;
     padding: 2em 0;
 }
 
+.partenaires h2 {
+    color: #ff7700;
+}
+
 .allpart {
     padding-bottom: 2em;
+    background-color: #007ACC;
+    margin: 3em auto;
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.3);
 }
 
 .imgpartenaires {
@@ -225,7 +340,7 @@ footer {
     gap: 2em;
 }
 
-.region>img {
+.imgpartenaires img {
     width: 100%;
     height: 100%;
     border: 1px solid black;
@@ -233,26 +348,82 @@ footer {
     box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
 }
 
-.francet>img {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    border-radius: 50%;
-    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
+/* FIN DE A PROPOS */
+
+
+/* DEBUT DE RESSOURCES */
+.grid-docs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    align-items: center;
 }
 
-.apf>img {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    border-radius: 50%;
-    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
+.txt-docs a {
+    margin: 0;
+    text-decoration: none;
+    color: #ff7700;
 }
 
-.afec>img {
+/* FIN DE RESSOURCES */
+
+
+/* DEBUT DU FOOTER */
+footer {
     width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    border-radius: 50%;
-    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.1);
+    background-color: #007ACC;
+    box-shadow: 0em -1em 1em rgba(0, 0, 0, 0.1);
 }
+
+.footer-container a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.footer-container {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* FIN DU FOOTER */
+
+/* DEBUT DARK MODE */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+svg {
+    width: 60%;
+}
+
+#dark-mode {
+    height: 2.5em;
+    width: 2.5em;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1em;
+    background-color: #ff7700;
+}
+
+#dark-mode svg:last-child {
+    display: none;
+}
+
+.dark-mode #dark-mode svg:first-child {
+    display: none;
+}
+
+.dark-mode #dark-mode svg:last-child {
+    display: block;
+}
+
+/* FIN DARK MODE */
